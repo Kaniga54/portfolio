@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
-  const words = ['Frontend Developer', 'Software Developer', 'Web Developer'];
+  const words = ['Frontend Developer', 'React Developer', 'Web Developer'];
   const [wordIndex, setWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);

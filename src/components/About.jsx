@@ -8,7 +8,7 @@ export default function About() {
       institution: 'Erode Sengunthar Engineering College',
       duration: '2022 - 2026',
       grade: 'CGPA: 7.5',
-      description: 'Acquired core competencies in Information Technology, Software Engineering, Database Management Systems, and Web Application Development. Focused on modern web interfaces and OOPs concepts in Java.',
+      description: 'Acquired core competencies in Software Engineering, Database Management Systems, and Web Application Development. Focused on modern web interfaces and OOPs concepts in Java.',
     },
     {
       degree: 'HSC (Class XII)',
@@ -59,7 +59,7 @@ export default function About() {
               Passionate about creating user-friendly web solutions
             </h3>
             <p className="about-text">
-              I am a dedicated Frontend Developer and IT graduate with a strong foundation in HTML, CSS, JavaScript, React.js, and Java. 
+              I am a dedicated Frontend Developer with a strong foundation in HTML, CSS, JavaScript, React.js, and Java. 
               I have hands-on experience developing responsive web apps through academic projects. 
               My goal is to continuously refine my technical skills, build performant web layouts, and deliver value to collaborative development teams.
             </p>
