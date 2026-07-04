@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
   const words = ['Frontend Developer', 'React.js Developer', 'IT Graduate', 'Problem Solver'];
@@ -65,6 +65,9 @@ export default function Hero() {
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               View My Work <ArrowRight size={18} />
+            </a>
+            <a href="/resume.pdf" download className="btn btn-secondary">
+              Resume <Download size={18} />
             </a>
             <a href="#contact" className="btn btn-secondary">
               Let's Talk

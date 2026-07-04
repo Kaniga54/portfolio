@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Code2 } from 'lucide-react';
+import { Menu, X, Sun, Moon, Code2, Download } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +56,9 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <a href="/resume.pdf" download className="nav-resume-btn">
+            Resume <Download size={16} />
+          </a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
@@ -88,6 +91,14 @@ export default function Navbar() {
             {link.name}
           </a>
         ))}
+        <a
+          href="/resume.pdf"
+          download
+          className="nav-link-mobile nav-resume-btn-mobile"
+          onClick={() => setIsOpen(false)}
+        >
+          Download Resume <Download size={18} style={{ marginLeft: '8px', verticalAlign: 'middle' }} />
+        </a>
       </div>
     </nav>
   );

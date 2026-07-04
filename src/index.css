@@ -1547,6 +1547,34 @@ button, input, textarea {
   }
 }
 
+/* Resume Navigation Buttons styling */
+.nav-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: var(--accent-gradient);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.nav-resume-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.3);
+  background: var(--accent-gradient-hover);
+}
+
+.nav-resume-btn-mobile {
+  color: var(--accent-primary) !important;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
 
 
 
