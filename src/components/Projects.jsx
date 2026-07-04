@@ -35,13 +35,13 @@ export default function Projects() {
       imageAlt: 'Portfolio Screenshot'
     },
     {
-      title: 'E-Commerce Website',
-      description: 'Created a responsive e-commerce website UI showcasing storefront features. Utilized reusable component structures, modern web design aesthetics, and user-friendly interactions.',
+      title: 'AI Resume Analyzer & Builder',
+      description: 'A full-stack application built with Next.js (App Router) and Tailwind CSS (v4) that parses uploaded PDF resumes to provide smart AI suggestions using OpenAI\'s GPT-4o-mini. Includes secure JWT authorization, MongoDB Atlas cloud storage, and a fallback local JSON DB.',
       category: 'React',
-      tags: ['React.js', 'CSS3 Grid', 'UI Development', 'JavaScript'],
+      tags: ['Next.js', 'OpenAI API', 'MongoDB', 'Express.js', 'TypeScript', 'Tailwind CSS (v4)'],
       demoUrl: 'https://github.com/Kaniga54',
       githubUrl: 'https://github.com/Kaniga54',
-      imageAlt: 'E-Commerce Screenshot'
+      imageAlt: 'AI Resume Analyzer Screenshot'
     },
     {
       title: 'Placement Cell Web Application',
