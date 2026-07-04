@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
-  const words = ['Frontend Developer', 'React.js Developer', 'IT Graduate', 'Problem Solver'];
+  const words = ['Frontend Developer', 'Software Developer', 'Web Developer'];
   const [wordIndex, setWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -59,8 +59,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-description">
-            I am a passionate Frontend Developer with knowledge of HTML, CSS, JavaScript, and React. 
-            I am looking for an opportunity to improve my technical skills and contribute to building user-friendly web applications.
+            I am a passionate Frontend Developer with a strong foundation in HTML, CSS, JavaScript, React.js, and Java. 
+            Hands-on experience in developing responsive and user-friendly web applications.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
@@ -88,9 +88,9 @@ export default function Hero() {
                 <code>
                   <span className="code-keyword">const</span> developer = &#123;<br />
                   &nbsp;&nbsp;name: <span className="code-string">'Kanigeshwari TM'</span>,<br />
-                  &nbsp;&nbsp;role: <span className="code-string">'Frontend Developer'</span>,<br />
+                  &nbsp;&nbsp;role: <span className="code-string">'Web Developer'</span>,<br />
                   &nbsp;&nbsp;skills: [<span className="code-string">'React'</span>, <span className="code-string">'JS'</span>, <span className="code-string">'HTML/CSS'</span>],<br />
-                  &nbsp;&nbsp;passion: <span className="code-string">'User-friendly UIs'</span><br />
+                  &nbsp;&nbsp;passion: <span className="code-string">'User experiences'</span><br />
                   &#125;;
                 </code>
               </pre>

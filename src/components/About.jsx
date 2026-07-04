@@ -1,14 +1,28 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen, Layers } from 'lucide-react';
+import { GraduationCap, Cpu, BookOpen, Layers } from 'lucide-react';
 
 export default function About() {
   const educationHistory = [
     {
-      degree: 'Bachelor of Technology (B.Tech) – Information Technology',
+      degree: 'B.Tech Information Technology',
       institution: 'Erode Sengunthar Engineering College',
       duration: '2022 - 2026',
       grade: 'CGPA: 7.5',
       description: 'Acquired core competencies in Information Technology, Software Engineering, Database Management Systems, and Web Application Development. Focused on modern web interfaces and OOPs concepts in Java.',
+    },
+    {
+      degree: 'HSC (Class XII)',
+      institution: 'JKK Rangammal Girls Higher Secondary School',
+      duration: '2020 - 2021',
+      grade: 'Percentage: 70.5%',
+      description: 'Completed secondary education in Science and Mathematics streams.',
+    },
+    {
+      degree: 'SSLC (Class X)',
+      institution: 'JKK Rangammal Girls Higher Secondary School',
+      duration: '2018 - 2019',
+      grade: 'Percentage: 71.6%',
+      description: 'Completed primary secondary education with distinction.',
     }
   ];
 
@@ -16,12 +30,17 @@ export default function About() {
     {
       icon: <Layers className="focus-icon" size={24} />,
       title: 'Frontend Development',
-      description: 'Designing interactive user interfaces using React JS, JavaScript, and modern HTML/CSS. Prioritizing modular architectures and mobile-first responsive screens.',
+      description: 'Designing interactive and user-friendly user interfaces using React.js, JavaScript, and modern HTML5/CSS3 structures.',
     },
     {
       icon: <BookOpen className="focus-icon" size={24} />,
-      title: 'Information Technology',
-      description: 'Understanding network standards, security methodologies, database models, and algorithm design to build efficient, robust software architectures.',
+      title: 'Web Development',
+      description: 'Building modern, responsive web applications with a focus on clean components, state management, and optimized performance.',
+    },
+    {
+      icon: <Cpu className="focus-icon" size={24} />,
+      title: 'Software Development',
+      description: 'Proficient in object-oriented programming (Java), database schema design, algorithms, and general problem-solving workflows.',
     }
   ];
 
@@ -40,8 +59,8 @@ export default function About() {
               Passionate about creating user-friendly web solutions
             </h3>
             <p className="about-text">
-              I am a dedicated Frontend Developer with strong foundational knowledge in HTML, CSS, JavaScript, and React. 
-              Holding a B.Tech in Information Technology, I love exploring how backend data can be presented beautifully and intuitively to users. 
+              I am a dedicated Frontend Developer and IT graduate with a strong foundation in HTML, CSS, JavaScript, React.js, and Java. 
+              I have hands-on experience developing responsive web apps through academic projects. 
               My goal is to continuously refine my technical skills, build performant web layouts, and deliver value to collaborative development teams.
             </p>
             
