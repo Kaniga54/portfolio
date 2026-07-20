@@ -1,31 +1,46 @@
 import React from 'react';
-import { Layout, GitBranch, Cpu } from 'lucide-react';
+import { Layout, GitBranch, Cpu, Wrench, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend Development',
-      icon: <Layout className="skill-cat-icon" size={24} />,
-      skills: [
-        { name: 'React.js', level: 85 },
-        { name: 'JavaScript', level: 80 },
-        { name: 'HTML & CSS', level: 90 },
-        { name: 'Responsive Web Design', level: 88 }
-      ]
-    },
-    {
-      title: 'Languages & Core',
+      title: 'Programming Languages',
       icon: <Cpu className="skill-cat-icon" size={24} />,
       skills: [
-        { name: 'Java', level: 78 },
-        { name: 'OOPs Concepts', level: 80 }
+        { name: 'Java', level: 82 },
+        { name: 'JavaScript', level: 85 }
       ]
     },
     {
-      title: 'Tools & Version Control',
+      title: 'Web Technologies',
+      icon: <Layout className="skill-cat-icon" size={24} />,
+      skills: [
+        { name: 'HTML & CSS', level: 92 },
+        { name: 'React.js', level: 88 }
+      ]
+    },
+    {
+      title: 'Version Control & Tools',
       icon: <GitBranch className="skill-cat-icon" size={24} />,
       skills: [
-        { name: 'Git & GitHub', level: 85 }
+        { name: 'Git & GitHub', level: 88 },
+        { name: 'VS Code', level: 90 },
+        { name: 'Figma & Canva', level: 80 }
+      ]
+    },
+    {
+      title: 'API & AI Tools',
+      icon: <Sparkles className="skill-cat-icon" size={24} />,
+      skills: [
+        { name: 'OpenAI API Integration', level: 85 }
+      ]
+    },
+    {
+      title: 'Other Skills',
+      icon: <CheckCircle2 className="skill-cat-icon" size={24} />,
+      skills: [
+        { name: 'Responsive Web Design', level: 90 },
+        { name: 'Problem Solving & Debugging', level: 88 }
       ]
     }
   ];

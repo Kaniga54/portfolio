@@ -27,30 +27,30 @@ export default function Projects() {
   const projectsData = [
     {
       title: 'Portfolio Website',
-      description: 'Developed a personal portfolio website showcasing key technical skills, projects, and contact information. Built with a fully responsive layout, smooth navigation, and optimized loading speeds.',
+      description: 'Developed a responsive portfolio website using HTML, CSS, JavaScript, and React.js to showcase projects and technical skills. Optimized for high performance and clean UI UX.',
       category: 'HTML/CSS',
-      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design'],
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Responsive Web Design'],
       demoUrl: '#home',
       githubUrl: 'https://github.com/Kaniga54',
       imageAlt: 'Portfolio Screenshot'
     },
     {
-      title: 'AI Resume Analyzer & Builder',
-      description: 'A full-stack application built with Next.js (App Router) and Tailwind CSS (v4) that parses uploaded PDF resumes to provide smart AI suggestions using OpenAI\'s GPT-4o-mini. Includes secure JWT authorization, MongoDB Atlas cloud storage, and a fallback local JSON DB.',
+      title: 'Student Placement Management System',
+      description: 'Developed a web-based Student Placement Management System for campus recruitment. Enabled students to register and track applications, while administrators managed companies and interviews. Improved recruitment efficiency and reduced manual workload.',
       category: 'React',
-      tags: ['Next.js', 'OpenAI API', 'MongoDB', 'Express.js', 'TypeScript', 'Tailwind CSS (v4)'],
+      tags: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Problem Solving'],
       demoUrl: 'https://github.com/Kaniga54',
       githubUrl: 'https://github.com/Kaniga54',
-      imageAlt: 'AI Resume Analyzer Screenshot'
+      imageAlt: 'Student Placement Management System Screenshot'
     },
     {
-      title: 'Placement Cell Web Application',
-      description: 'Developed an information system designed to manage academic placement activities. Helps students and coordinators log details, search databases, and organize placement-related information efficiently.',
+      title: 'Vita CV – AI ATS Resume Analyzer & Resume Builder',
+      description: 'Developed an AI-powered ATS Resume Analyzer and Interactive Resume Builder using Next.js, React, MongoDB, OpenAI API, and Tailwind CSS. Implemented ATS resume scoring, keyword matching, AI-based resume suggestions, live resume preview, customizable templates, and A4 PDF export for creating ATS-friendly resumes.',
       category: 'React',
-      tags: ['React.js', 'JavaScript', 'State Management', 'UI Design', 'Problem Solving'],
+      tags: ['Next.js', 'React', 'MongoDB', 'OpenAI API', 'Tailwind CSS'],
       demoUrl: 'https://github.com/Kaniga54',
       githubUrl: 'https://github.com/Kaniga54',
-      imageAlt: 'Placement Cell Screenshot'
+      imageAlt: 'Vita CV Screenshot'
     }
   ];
 
