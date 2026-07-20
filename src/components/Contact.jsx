@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Send, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Send, Phone, CheckCircle, AlertCircle } from 'lucide-react';
 
-const Github = ({ size = 24, ...props }) => (
+const Github = ({ size = 22, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -19,7 +19,7 @@ const Github = ({ size = 24, ...props }) => (
   </svg>
 );
 
-const Linkedin = ({ size = 24, ...props }) => (
+const Linkedin = ({ size = 22, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -42,12 +42,11 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
 
   const [errors, setErrors] = useState({});
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error' or null
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +54,6 @@ export default function Contact() {
       ...formData,
       [name]: value
     });
-    // Clear validation error when user types
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -72,7 +70,6 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Invalid email address';
     }
-    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
 
     setErrors(newErrors);
@@ -82,58 +79,38 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Simulate API submission
       setSubmitStatus('success');
-      // Reset form
       setFormData({
         name: '',
         email: '',
-        subject: '',
         message: ''
       });
-      // Clear status after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
     } else {
       setSubmitStatus('error');
     }
   };
 
-  const contactDetails = [
+  const connectButtons = [
     {
-      icon: <Mail className="contact-detail-icon" size={20} />,
-      label: 'Email Me',
-      value: 'kanigeshwaritm@gmail.com',
-      href: 'mailto:kanigeshwaritm@gmail.com'
-    },
-    {
-      icon: <Phone className="contact-detail-icon" size={20} />,
-      label: 'Call Me',
-      value: '+91 6381915595',
-      href: 'tel:+916381915595'
-    },
-    {
-      icon: <MapPin className="contact-detail-icon" size={20} />,
-      label: 'Location',
-      value: 'Tamil Nadu, India',
-      href: 'https://maps.google.com'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github size={22} />,
-      href: 'https://github.com/Kaniga54',
-      label: 'GitHub'
-    },
-    {
-      icon: <Linkedin size={22} />,
+      icon: <Linkedin size={20} />,
       href: 'https://www.linkedin.com/in/kanigeshwari-tm/',
       label: 'LinkedIn'
     },
     {
-      icon: <Mail size={22} />,
+      icon: <Github size={20} />,
+      href: 'https://github.com/Kaniga54',
+      label: 'GitHub'
+    },
+    {
+      icon: <Mail size={20} />,
       href: 'mailto:kanigeshwaritm@gmail.com',
       label: 'Email'
+    },
+    {
+      icon: <Phone size={20} />,
+      href: 'tel:+916381915595',
+      label: 'Call'
     }
   ];
 
@@ -141,58 +118,13 @@ export default function Contact() {
     <section id="contact" className="section contact-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-subtitle">Reach Out</span>
-          <h2 className="section-title">Contact Me</h2>
+          <h2 className="section-title contact-title-custom">Contact Me</h2>
         </div>
 
         <div className="contact-grid">
-          {/* Column 1: Info and Socials */}
-          <div className="contact-info">
-            <h3 className="contact-heading">Let's build something amazing together</h3>
-            <p className="contact-text">
-              Have an exciting project idea, a job opportunity, or just want to say hello? 
-              Feel free to drop a message. I am always open to discussing new web development opportunities, frontend roles, or responsive UI designs.
-            </p>
-
-            <div className="contact-details">
-              {contactDetails.map((detail, index) => (
-                <a key={index} href={detail.href} className="contact-detail-card glass-card">
-                  <div className="contact-icon-wrapper">
-                    {detail.icon}
-                  </div>
-                  <div className="contact-detail-content">
-                    <span className="contact-detail-label">{detail.label}</span>
-                    <span className="contact-detail-value">{detail.value}</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-
-            <div className="contact-socials-wrapper">
-              <span className="socials-label">FIND ME ON</span>
-              <div className="contact-socials">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="contact-social-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Column 2: Form */}
+          {/* Left Column: Form */}
           <div className="contact-form-container glass-card">
-            <h3 className="contact-heading">Send a Message</h3>
-            
             <form onSubmit={handleSubmit} noValidate>
-              
               {submitStatus === 'success' && (
                 <div className="form-status success">
                   <CheckCircle size={20} />
@@ -203,18 +135,17 @@ export default function Contact() {
               {submitStatus === 'error' && (
                 <div className="form-status error">
                   <AlertCircle size={20} />
-                  <span>Please correct the errors in the form below.</span>
+                  <span>Please fill in all fields correctly.</span>
                 </div>
               )}
 
               <div className="form-group">
-                <label htmlFor="name" className="form-label">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   className={`form-control ${errors.name ? 'invalid' : ''}`}
-                  placeholder="Your Name"
+                  placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
                 />
@@ -222,13 +153,12 @@ export default function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email" className="form-label">Email Address</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   className={`form-control ${errors.email ? 'invalid' : ''}`}
-                  placeholder="name@example.com"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -236,27 +166,12 @@ export default function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject" className="form-label">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className={`form-control ${errors.subject ? 'invalid' : ''}`}
-                  placeholder="What is this regarding?"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
-                {errors.subject && <span className="error-message">{errors.subject}</span>}
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   className={`form-control ${errors.message ? 'invalid' : ''}`}
-                  placeholder="Your Message..."
+                  placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
@@ -267,6 +182,30 @@ export default function Contact() {
                 Send Message <Send size={16} />
               </button>
             </form>
+          </div>
+
+          {/* Right Column: Connect Info & Circular Action Buttons */}
+          <div className="contact-connect-info">
+            <h3 className="connect-heading">Let's Connect</h3>
+            <p className="connect-text">
+              Feel free to contact me for internships, jobs or freelance work.
+            </p>
+
+            <div className="connect-buttons-row">
+              {connectButtons.map((btn, index) => (
+                <a
+                  key={index}
+                  href={btn.href}
+                  className="connect-circle-btn"
+                  target={btn.href.startsWith('tel:') ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
+                  aria-label={btn.label}
+                  title={btn.label}
+                >
+                  {btn.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

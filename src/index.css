@@ -282,6 +282,16 @@ button, input, textarea {
   outline: none;
 }
 
+.form-control::placeholder {
+  color: rgba(243, 244, 246, 0.65) !important;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+.light-theme .form-control::placeholder {
+  color: rgba(15, 23, 42, 0.55) !important;
+}
+
 .form-control:focus {
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px var(--input-focus);
@@ -1291,13 +1301,17 @@ button, input, textarea {
 /* Contact Section Styling */
 .contact-section {
   background-color: var(--bg-primary);
+  padding: 120px 0 80px;
+  overflow: visible;
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-info {
@@ -1573,6 +1587,66 @@ button, input, textarea {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+}
+
+/* Custom Contact Section Styling matching screenshot */
+.contact-title-custom {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  overflow: visible;
+}
+
+.contact-connect-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.connect-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.connect-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.connect-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.connect-circle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.connect-circle-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.5);
 }
 
 
