@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Layers } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const Github = ({ size = 24, ...props }) => (
   <svg
@@ -32,7 +32,8 @@ export default function Projects() {
       tags: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Responsive Web Design'],
       demoUrl: '#home',
       githubUrl: 'https://github.com/Kaniga54',
-      imageAlt: 'Portfolio Screenshot'
+      image: '/project-portfolio.jpg',
+      imageAlt: 'Portfolio Website Screenshot'
     },
     {
       title: 'Student Placement Management System',
@@ -41,6 +42,7 @@ export default function Projects() {
       tags: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Problem Solving'],
       demoUrl: 'https://github.com/Kaniga54',
       githubUrl: 'https://github.com/Kaniga54',
+      image: '/project-placement.jpg',
       imageAlt: 'Student Placement Management System Screenshot'
     },
     {
@@ -50,6 +52,7 @@ export default function Projects() {
       tags: ['Next.js', 'React', 'MongoDB', 'OpenAI API', 'Tailwind CSS'],
       demoUrl: 'https://github.com/Kaniga54',
       githubUrl: 'https://github.com/Kaniga54',
+      image: '/project-vitacv.jpg',
       imageAlt: 'Vita CV Screenshot'
     }
   ];
@@ -84,10 +87,13 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <div key={index} className="project-card glass-card">
               
-              {/* CSS Vector Mockup Header */}
+              {/* Real Screenshot Visual Header */}
               <div className="project-card-visual">
-                <div className="visual-overlay"></div>
-                <Layers className="visual-icon" size={48} />
+                <img 
+                  src={project.image} 
+                  alt={project.imageAlt} 
+                  className="project-img-preview"
+                />
                 <span className="visual-category">{project.category}</span>
               </div>
 

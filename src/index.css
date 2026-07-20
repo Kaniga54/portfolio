@@ -1649,6 +1649,19 @@ button, input, textarea {
   box-shadow: 0 8px 22px rgba(59, 130, 246, 0.5);
 }
 
+/* Project Image Preview Styling */
+.project-img-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-img-preview {
+  transform: scale(1.06);
+}
+
 
 
 
